@@ -39,10 +39,6 @@ class audioManager:
 		self.volume = min(self.volume-0.1, 1)
 		self.set_volume()
 
-pygame.mixer.music.set_volume(0.12)
-pygame.mixer.music.load("music/_.mp3")
-pygame.mixer.music.queue("music/_2.mp3")
-pygame.mixer.music.play()
 
 audio = audioManager()
 audio.load("music")
@@ -63,4 +59,3 @@ def release(key):
 
 with keyboard.Listener(on_release = release) as listner:
 	listner.join()
-
